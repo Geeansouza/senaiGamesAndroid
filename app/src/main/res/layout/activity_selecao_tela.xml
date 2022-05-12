@@ -21,7 +21,6 @@
         android:layout_height="wrap_content"
         app:layout_constraintGuide_percent=".2"
         android:orientation="vertical"
-
         />
     <!--vetical line 3 -->
     <androidx.constraintlayout.widget.Guideline
@@ -29,6 +28,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintGuide_percent=".90"
+        android:orientation="vertical"
+        />
+    <!--vetical line search -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vsearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent=".80"
         android:orientation="vertical"
         />
 
@@ -100,7 +107,6 @@
         />
 
     <!--Header icones e pesquisa -->
-
     <!-- icones -->
     <ImageView
         android:id="@+id/icone"
@@ -114,19 +120,19 @@
         />
     <!-- Search-->
     <EditText
-        android:background="@drawable/border_search"
-        android:layout_marginLeft="50dp"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginLeft="20dp"
+        android:background="@drawable/border_search"
         android:text="Search..."
-        android:textColor="@color/white"
         android:textAlignment="center"
-        app:layout_constraintTop_toBottomOf="@id/h1"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@id/h2"
-        app:layout_constraintStart_toEndOf="@id/v2"
         app:layout_constraintEnd_toStartOf="@id/v3"
-        >
-    </EditText>
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@id/v2"
+        app:layout_constraintTop_toBottomOf="@id/h1"
+        app:layout_constraintVertical_bias="1.0"></EditText>
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
     <!-- Section Card Priniciparl-->
 
@@ -137,48 +143,195 @@
         android:text="New and Trending"
         android:textColor="@color/white"
         android:textSize="24dp"
-        android:fontFamily="@font/turret_road_extrabold"
+        android:fontFamily="@font/turretroad_extrabold"
         app:layout_constraintBottom_toTopOf="@id/hTextTop"
         app:layout_constraintStart_toStartOf="@id/v1"
         />
 
     <!--Horizontal Scoll Principal -->
+    <!-- Scroll1___________________________________________-->
     <HorizontalScrollView
+        android:id="@+id/scroll1"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="@id/h4"
-        app:layout_constraintTop_toTopOf="@id/h3"
+        app:layout_constraintBottom_toBottomOf="@+id/h4"
+        app:layout_constraintTop_toTopOf="@+id/h3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         >
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-            <!--Card 1 -->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/card"
-                android:layout_marginHorizontal="20dp"
-                />
-            <!--Card 2 -->
-            <!--Card 3 -->
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="20dp"
-                android:src="@drawable/card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-                />
+            <!-- card1______________________________________________________-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardpage2"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:layout_marginHorizontal="20dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_card"
+                    android:src="@drawable/image"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contra III: The Alien Wars"
+                    android:fontFamily="@font/turret_road_extrabold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="3dp"/>
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/card"
-                android:layout_marginHorizontal="20dp"
-                />
+                <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/nintendo"
+                        android:layout_marginRight="5dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/window"
+                        android:layout_marginRight="5dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/android"
+                        android:layout_marginRight="49dp"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:textSize="14sp"
+                        android:text="Watch"
+                        android:backgroundTint="@color/botao"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- card2______________________________________________________-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardpage2"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginHorizontal="20dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contra III: The Alien Wars"
+                    android:fontFamily="@font/turret_road_extrabold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="3dp"/>
+
+                <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/nintendo"
+                        android:layout_marginRight="5dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/window"
+                        android:layout_marginRight="5dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/android"
+                        android:layout_marginRight="49dp"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:textSize="14sp"
+                        android:text="Watch"
+                        android:backgroundTint="@color/botao"/>
+                </LinearLayout>
+            </LinearLayout>
+            <!-- card3______________________________________________________-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/cardpage2"
+                android:layout_gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="10dp"
+                android:layout_marginHorizontal="20dp">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/image"
+                    android:layout_marginBottom="5dp"/>
+                <TextView
+                    android:paddingLeft="10dp"
+                    android:layout_width="230dp"
+                    android:layout_height="wrap_content"
+                    android:text="Contra III: The Alien Wars"
+                    android:fontFamily="@font/turret_road_extrabold"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    android:layout_marginBottom="3dp"/>
+
+                <LinearLayout
+                    android:paddingLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/nintendo"
+                        android:layout_marginRight="5dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/window"
+                        android:layout_marginRight="5dp"/>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/android"
+                        android:layout_marginRight="49dp"/>
+
+                    <Button
+                        android:layout_width="100dp"
+                        android:layout_height="40dp"
+                        android:textSize="14sp"
+                        android:text="Watch"
+                        android:backgroundTint="@color/botao"/>
+                </LinearLayout>
+            </LinearLayout>
+
         </LinearLayout>
+
     </HorizontalScrollView>
+
     <!-- %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% -->
     <!-- Section Card Secundaria-->
     <!-- Texto-->
@@ -188,12 +341,13 @@
         android:text="Best of the year"
         android:textColor="@color/white"
         android:textSize="24dp"
-        android:fontFamily="@font/turret_road_extrabold"
+        android:fontFamily="@font/turretroad_extrabold"
         app:layout_constraintStart_toStartOf="@+id/v1"
         app:layout_constraintBottom_toTopOf="@id/hTextTop2"
         />
     <!--Horizontal Scoll Principal -->
     <HorizontalScrollView
+        android:id="@+id/scroll2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="@id/h6"
@@ -205,38 +359,126 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.cardview.widget.CardView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                app:cardCornerRadius="20dp">
+                android:orientation="vertical"
+                android:layout_marginHorizontal="23dp">
 
-            <!--Card 1 -->
-                <ImageView
+                <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginHorizontal="5dp"
-                    android:src="@drawable/card" />
-            <!--Card 2 -->
+                    android:layout_height="wrap_content"
 
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="5dp"
-                android:src="@drawable/card"
-                />
-            <!--Card 3 -->
-            <ImageView
-                android:layout_width="150dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/card"
-                android:layout_marginHorizontal="5dp"
-                />
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+                    app:cardCornerRadius="20px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/card2"
+
+                        />
+                </androidx.cardview.widget.CardView>
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Witcher"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/turretroad_extrabold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="12dp"
+
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="23dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    app:cardCornerRadius="20px">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/card2"
+
+                        />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Witcher"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/turretroad_extrabold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="12dp">
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="23dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20px">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/card2"
+                        />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="The Witcher"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/turretroad_extrabold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="12dp"
+                    >
+                </TextView>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="23dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20px">
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/card2"
+                        />
+                </androidx.cardview.widget.CardView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="The Witcher"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/turretroad_extrabold"
+                    android:textSize="12dp"
+                    android:layout_marginTop="12dp"
+                    >
+                </TextView>
+            </LinearLayout>
+     </LinearLayout>
     </HorizontalScrollView>
-
-
-
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

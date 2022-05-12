@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="black_blue">#242734</color>
     <color name="GraySearch">#424657</color>
+    <color name="botao">#FFAF29</color>
+
 
 </resources>
